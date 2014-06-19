@@ -49,11 +49,11 @@ sed -e 's/ZOOKEEPER_SERVERS/'"$TMP"'/' storm.yaml.tmpl | sed 's/NIMBUS_HOST/\"'"
 sudo cp storm.yaml $STORM_HOME/conf/
 
 # Configure supervisord
-if [ "$#" -lt 3 ]
+if [ $2 = "slave" ]
 then
-sudo cp master_supervisord.conf /etc/supervisor/supervisord.conf
-else
 sudo cp slave_supervisord.conf /etc/supervisor/supervisord.conf
+else
+sudo cp master_supervisord.conf /etc/supervisor/supervisord.conf
 fi
 
 # Start supervisor
