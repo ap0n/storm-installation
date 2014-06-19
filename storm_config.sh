@@ -11,7 +11,8 @@ ZOOKEEPER_HOSTS="masterVM"
 STORM_DIR="/app/storm"
 
 # Storm logs directory
-STORM_LOG_DIR="/var/log/storm"
+# Logs configuration didn't work! Default: $STORM_HOME/logs
+# STORM_LOG_DIR="/var/log/storm"
 
 # Storm installation directory
 STORM_HOME="/usr/local/storm"
