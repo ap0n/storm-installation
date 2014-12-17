@@ -16,16 +16,19 @@
 
 ########### These MUST be filled in for a storm configuration
  storm.zookeeper.servers:
-     ZOOKEEPER_SERVERS
+      - snf-618466.vm.okeanos.grnet.gr
+ - snf-618465.vm.okeanos.grnet.gr
+ - snf-618464.vm.okeanos.grnet.gr
+
 #     - "server2"
 # 
- nimbus.host: NIMBUS_HOST
+ nimbus.host: "snf-618466.vm.okeanos.grnet.gr"
  nimbus.childopts: "-Xmx1024m -Djava.net.preferIPv4Stack=true"
  ui.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
  supervisor.childopts: "-Djava.net.preferIPv4Stack=true"
  worker.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true -javaagent:/var/nfs/spass/spass-meter-ia.jar=logLevel=SEVERE,overhead=false,configDetect=false,xmlconfig=/var/nfs/spass/storm.xml,out=/var/nfs/spass/logs"
 
- storm.local.dir: STORM_DIR
+ storm.local.dir: "/app/storm"
 # 
 # ##### These may optionally be filled in:
 #    
