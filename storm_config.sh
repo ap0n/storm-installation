@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Host name of the node that will act as nimbus
-NIMBUS_HOST="snf-618466.vm.okeanos.grnet.gr"
+NIMBUS_HOST="NIMBUS_HOST"
 
 # Host name of the zookeeper server(s)
 # (space separated list if more than one)
-ZOOKEEPER_HOSTS="snf-618466.vm.okeanos.grnet.gr snf-618465.vm.okeanos.grnet.gr snf-618464.vm.okeanos.grnet.gr"
+ZOOKEEPER_HOSTS="ZKHOST1 ZKHOST2"
 
 # Storm wroking directory
 STORM_DIR="/app/storm"
