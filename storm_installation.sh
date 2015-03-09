@@ -43,7 +43,7 @@ sudo chmod 750 $STORM_DIR
 TMP=""
 for i in $ZOOKEEPER_HOSTS
 do
-TMP="$TMP - $i\n"
+TMP="$TMP - \"$i\"\n     "
 done
 rm storm.yaml
 sed -e 's/ZOOKEEPER_SERVERS/'"$TMP"'/' storm.yaml.tmpl | sed 's/NIMBUS_HOST/\"'"$NIMBUS_HOST"'\"/' | sed 's#STORM_DIR#\"'"$STORM_DIR"'\"#' > storm.yaml
