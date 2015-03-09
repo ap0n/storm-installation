@@ -52,9 +52,9 @@ sudo cp storm.yaml $STORM_HOME/conf/
 # Configure supervisord
 if [ "$2" == "slave" ]
 then
-sudo cp slave_supervisord.conf /etc/supervisor/supervisord.conf
+sudo cat slave_supervisord.conf >> /etc/supervisor/supervisord.conf
 else
-sudo cp master_supervisord.conf /etc/supervisor/supervisord.conf
+sudo cat master_supervisord.conf >> /etc/supervisor/supervisord.conf
 fi
 
 # Start supervisor
